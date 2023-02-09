@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+div.header {
+    display: block;
+    height: 10%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.header a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+
+
+div.intro{
+	height: 500px;
+	width: 100%;
+	position: relative;
+	text-align: center;
+	object-fit: contain;
+	background-color: #FAFFFE;
+}
+
+video{
+height: 500px;
+width: auto;
+object-fit: contain;
+align-content: center;
+}
+
+h1{
+    height: 80px;
+    width: 50%;
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    right: 40px;
+    text-align: center;
+    font-size: 5em;
+    color: #103900;
+}
+
+p{
+    position: relative;
+    top: 10px;
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: justify-all;
+    font-size: 1.5em;
+    color: #DDA77B;
+}
+
+div.left a{
+	color: grey;
+}
+
+div.left a:hover{
+	color: darkslateblue;
+	font-style: italic;
+	font-weight: bold;
+}
+
+div.left a:visited{
+	color: midnightblue;
+}
+
+div.right{
+	position: absolute;
+	top: 125px;
+	right: 16px;
+	height: 350px;
+    width: 30%;
+    font-size: 2em;
+	color: #DDA77B;
+}
+
+div.more{
+    height: 1000px;
+    width: 100%;
+    background-color: #C2EABA;
+    position: relative;
+}
+
+div.left{
+	position: absolute;
+	left: 50px;
+	top: 30px;
+	width: 750px;
+	height: auto;
+	text-align: center;
+}
+
+#pic1{
+	position: absolute;
+	top: 15px;
+	right: 200px;
+	width: 300px;
+	height: 450px;
+	object-fit: fit;
+	z-index: 2;
+}
+#pic2{
+	position:absolute;
+    top: 300px;
+    right: 50px;
+    width: 300px;
+    height: 450px;
+    object-fit: fit;
+    z-index: 1;
+}
+
+footer {
+    width: 100%;
+    background-color: #abb0a9;
+}
+
+footer h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    margin-left: 10%;
+    margin-bottom: 20px;
+    line-height: 2em;
+}
+
+.separator {
+    width: 80%;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #103900;
+}
+
+p.legislation {
+    margin-left: 10%;
+    margin-top: 20px;
+    font-size: .9em;
+    color: black;
+}
+
+
+footer p a, div.header a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.2s ease-out;
+
+}
+
+footer p a::after, div.header a::after {
+    content: ""; /* Créer un élément vide, sans texte */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.2s ease-out;
+}
+
+footer p a:hover::after, div.header a:hover::after {
+    transform: scaleX(1); /* Rend l'élélemt visible */
+    transform-origin: left;
+}

@@ -1,0 +1,149 @@
+
+/* SETUP */
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+html, body {
+    height: 100%;
+}
+
+div.header {
+    display: block;
+    height: 10%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #abb0a9;
+}
+
+div.header a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 30px;
+}  
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3em;
+}
+
+p.description {
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    font-size: 1.3em;
+}
+
+/* Grid */
+
+.grid-container {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    display: grid;
+    grid-template-areas: 
+    "email mail maps";
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.email {grid-area: email;}
+.mail {grid-area: mail;}
+.maps3 {grid-area: maps;}
+
+
+.grid-container p {
+    font-size: 2em;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.email p {
+    font-size: 1em;
+}
+
+.email h2 {
+    text-align: center;
+}
+
+.mail p {
+    font-size: 1em;
+    line-height: 2em;
+}
+
+.mail h2 {
+    text-align: center;
+}
+
+.maps {
+    overflow: none;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    background-color: #abb0a9;
+    margin-top: 20px;
+}
+
+footer h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    margin-left: 10%;
+    margin-bottom: 20px;
+    line-height: 2em;
+}
+
+.separator {
+    width: 80%;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #103900;
+}
+
+p.legislation {
+    margin-left: 10%;
+    margin-top: 20px;
+    font-size: .9em;
+}
+
+footer p a, div.header a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.2s ease-out;
+}
+
+footer p a::after, div.header a::after {
+    content: ""; /* Créer un élément vide, sans texte */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.2s ease-out;
+}
+
+footer p a:hover::after, div.header a:hover::after {
+    transform: scaleX(1); /* Rend l'élélemt visible */
+    transform-origin: left;
+}

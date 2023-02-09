@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+}
+
+div.header {
+    display: block;
+    min-height: 80px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.header a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+div.intro{
+    width: 100%;
+    height: 170px;
+    position: relative;
+}
+
+h1{
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    text-align: center;
+    font-size: 5em;
+    color: #103900;
+}
+
+h2{
+    height: 60px;
+    width: 100%;
+    position: relative;
+    top: 20px;
+    left: 30px;
+    text-align: left;
+    font-size: 3em;
+    color: #C2EABA;
+}
+
+h3{
+    height: 50px;
+    width: 100%;
+    position: relative;
+    top: 15px;
+    left: 20px;
+    text-align: left;
+    font-size: 2.2em;
+    color: #945D5E;
+}
+
+p{
+    position: relative;
+    top: 10px;
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: justify-all;
+    font-size: 1.5em;
+    color: #DDA77B;
+}
+
+div a{
+    color: grey;
+}
+
+div a:hover{
+    color: darkslateblue;
+    font-style: italic;
+    font-weight: bold;
+}
+
+div a:visited{
+    color: midnightblue;
+}
+
+div.volunteer{
+    width: 100%;
+    height: 500px;
+    background-color: #C2EABA;
+    position: relative;
+}
+
+div.paid{
+    width: 100%;
+    position: relative;
+}
+
+footer {
+    width: 100%;
+    background-color: #abb0a9;
+}
+
+footer h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    margin-left: 10%;
+    margin-bottom: 20px;
+    line-height: 2em;
+}
+
+.separator {
+    width: 80%;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #103900;
+}
+
+p.legislation {
+    margin-left: 10%;
+    margin-top: 20px;
+    font-size: .9em;
+}
+
+/* Effet liens */
+
+footer p a, div.header a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.2s ease-out;
+
+}
+
+footer p a::after, div.header a::after {
+    content: ""; /* Créer un élément vide, sans texte */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.2s ease-out;
+}
+
+footer p a:hover::after, div.header a:hover::after {
+    transform: scaleX(1); /* Rend l'élélemt visible */
+    transform-origin: left;
+}
